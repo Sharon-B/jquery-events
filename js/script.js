@@ -28,7 +28,7 @@ This will give us an array containing two strings.
 The first string will be box and the second one will be 1.
 */
 
-
+/* What if we wanted only a certain class to change to red at any given time:- */
 $(document).ready(function() {
     $(".box").on("click", function() {
     	/**
@@ -37,7 +37,7 @@ $(document).ready(function() {
     	 */
     	var classNames = $(this).attr("class").split(" ");
     	var boxClass = classNames[0];
-    	var className = classNames[1];
+    	var className = classNames[1]; /* either 1, 2 or 3 */
     	if ($(this).css("background-color") == "rgb(255, 0, 0)") {
     		// If this object is already red, turn it black
     		$("." + className).css("background-color", "#000"); 
